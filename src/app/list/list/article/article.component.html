@@ -1,0 +1,6 @@
+<h1>{{article?.title}}</h1>
+<h4>by {{article?.author}}</h4>
+<article class="article">
+  <div class="article__thumbnail" [attr.style]="'background-image: url(' + article?.thumbnail + ')'"></div>
+  <div>{{article?.selftext ? article.selftext : defaultText }}</div>
+</article>

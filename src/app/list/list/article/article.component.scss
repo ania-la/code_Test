@@ -1,0 +1,16 @@
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.article__thumbnail {
+  width: 150px;
+  height: 150px;
+  background-color: lightgray;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}

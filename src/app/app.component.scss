@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.main {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(227,227,230,1) 0%, rgba(249,249,251,1) 35%, rgba(248,253,254,1) 100%);
+
+  .content {
+    display: block;
+    padding: 20px;
+    height: 100vh;
+    overflow: auto;
+    flex: 1;
+  }
+}
+

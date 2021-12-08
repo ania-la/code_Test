@@ -1,0 +1,24 @@
+<h1 class="list__heading">List of articles</h1>
+<section class="list__container">
+  <article *ngFor="let article of dataLimited" class="list__wrapper" (click)="navigateByUrl(article.id)" role="button" [attr.aria-label]="'Show article' + article.title"><!--[routerLink]="'/article'"-->
+    <h3 class="list__heading-small">{{article.title}}</h3>
+    <div class="list__article">
+      <div class="list__thumbnail" [attr.style]="'background-image: url(' + article.thumbnail + ')'">
+      </div>
+      <div class="list__information">
+        <div>Created: <strong>{{article.created | date:'fullDate'}}</strong></div>
+        <div>Comments: <strong>{{article.num_comments}}</strong></div>
+        <div>Author: <strong>{{article.author}}</strong></div>
+        <div>Score: <strong>{{article.score}}</strong></div>
+      </div>
+    </div>
+  </article>
+</section>
+<section class="list__paginator">
+  <mat-paginator [length]="lists.length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="pageEvent = getServerData($event)"
+                 aria-label="Select page">
+  </mat-paginator>
+</section>
