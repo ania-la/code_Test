@@ -1,5 +1,3 @@
-// declare module ListOfArticles {
-
   export interface LinkFlairRichtext {
     e: string;
     t: string;
@@ -545,7 +543,4 @@
     kind: string;
     data: Data;
   }
-// }
-
-// export const ListOfArticles;
 
